@@ -5,12 +5,20 @@ import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { RegisterComponent } from './user/register/register.component';
+import { CartRouteActivatorGuard } from './cart/cart-route-activator.guard';
+import { CartRouteDeactivatorGuard } from './cart/cart-route-deactivator.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'catalog', redirectTo: '/catalog/', pathMatch: 'full' },
   { path: 'catalog/:filter', component: CatalogComponent },
-  { path: 'cart', component: CartComponent },
+  {
+    path: 'cart',
+    component: CartComponent,
+    canActivate: [CartRouteActivatorGuard],
+    canDeactivate: [CartRouteDeactivatorGuard],
+  },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegisterComponent },
 ];
