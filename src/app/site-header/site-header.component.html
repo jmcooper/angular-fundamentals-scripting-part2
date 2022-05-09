@@ -3,7 +3,6 @@
     <img class="logo" src="/assets/images/logo.png" alt="Logo" />
     <a routerLink="home" routerLinkActive="active">Home</a>
     <a routerLink="catalog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Catalog</a>
-    <a routerLink="catalog/Heads" routerLinkActive="active">Heads</a>
     <div class="cart">
       <a routerLink="cart">Cart</a>
       <div class="cartCount" *ngIf="cart.length > 0">
