@@ -2,16 +2,16 @@
   <div class="left">
     <img class="logo" src="/assets/images/logo.png" alt="Logo" />
     <a routerLink="home" routerLinkActive="active">Home</a>
-    <a routerLink="catalog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Catalog</a>
+    <a [routerLink]="['/catalog/', '']" routerLinkActive="active">Catalog</a>
     <div class="cart">
-      <a routerLink="cart">Cart</a>
+      <a routerLink="cart" routerLinkActive="active">Cart</a>
       <div class="cartCount" *ngIf="cart.length > 0">
         <div>{{ cart.length }}</div>
       </div>
     </div>
   </div>
   <div class="right">
-    <a routerLink="sign-in">Sign In</a>
-    <a routerLink="register" class="cta">Register</a>
+    <a routerLink="sign-in" routerLinkActive="active">Sign In</a>
+    <a routerLink="register" routerLinkActive="active" class="cta">Register</a>
   </div>
 </div>

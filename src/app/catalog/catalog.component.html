@@ -4,7 +4,7 @@
     <a class="button" routerLink="/catalog/Arms" routerLinkActive="active">Arms</a>
     <a class="button" routerLink="/catalog/Torsos" routerLinkActive="active">Torsos</a>
     <a class="button" routerLink="/catalog/Bases" routerLinkActive="active">Bases</a>
-    <a class="button" routerLink="/catalog/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">All</a>
+    <a class="button" [routerLink]="['/catalog', '']" routerLinkActive="active">All</a>
   </div>
 
   <ul class="products">

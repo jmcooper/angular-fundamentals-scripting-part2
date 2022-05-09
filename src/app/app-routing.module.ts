@@ -11,7 +11,6 @@ import { CartRouteDeactivatorGuard } from './cart/cart-route-deactivator.guard';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'catalog', redirectTo: '/catalog/', pathMatch: 'full' },
   { path: 'catalog/:filter', component: CatalogComponent },
   {
     path: 'cart',
