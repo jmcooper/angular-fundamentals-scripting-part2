@@ -205,7 +205,7 @@ app.get("/api/products", (req, res) => {
       discount: 0,
     },
   ];
-  res.send(products);
+  setTimeout(() => res.send(products), 0);
 });
 
 app.post("/api/cart", (req, res) => {

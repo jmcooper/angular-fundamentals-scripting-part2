@@ -7,11 +7,16 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { RegisterComponent } from './user/register/register.component';
 import { CartRouteActivatorGuard } from './cart/cart-route-activator.guard';
 import { CartRouteDeactivatorGuard } from './cart/cart-route-deactivator.guard';
+import { ProductsResolver } from './catalog/products.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'catalog/:filter', component: CatalogComponent },
+  {
+    path: 'catalog/:filter',
+    component: CatalogComponent,
+    resolve: { products: ProductsResolver },
+  },
   {
     path: 'cart',
     component: CartComponent,

@@ -23,9 +23,7 @@ export class CatalogComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe({
-      next: (products: IProduct[]) => (this.products = products),
-    });
+    this.products = this.route.snapshot.data['products'];
 
     this.cartService.getCart().subscribe({
       next: (cart) => (this.cart = cart),

@@ -1,2 +1,3 @@
 <bot-site-header></bot-site-header>
-<router-outlet></router-outlet>
+<div class="loading" *ngIf="loading">Loading…</div>
+<router-outlet *ngIf="!loading"></router-outlet>
