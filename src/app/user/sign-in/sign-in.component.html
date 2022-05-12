@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="form">
+  <form (ngSubmit)="signIn()" class="form">
     <img class="logo" src="/assets/images/logo.png" />
     <div class="sign-in">Sign In</div>
     <div class="sub-text">to acquire awesome bots</div>
@@ -7,16 +7,21 @@
       name="email"
       placeholder="Email Address"
       type="text"
+      [(ngModel)]="credentials.email"
     />
-    <input
+      <input
       name="password"
       placeholder="Password"
       type="password"
+      [(ngModel)]="credentials.password"
     />
     <div class="buttons">
-      <button type="submit"class="button cta">
+      <button type="submit" class="button cta">
         Sign In
       </button>
+    </div>
+    <div class="signInError" *ngIf="signInError">
+      Sign-In Failed. Please try again.
     </div>
   </form>
 </div>
