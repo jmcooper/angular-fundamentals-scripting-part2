@@ -11,11 +11,7 @@ export class UserService {
   private user: BehaviorSubject<IUser | null>;
 
   constructor(private http: HttpClient) {
-    this.user = new BehaviorSubject<IUser | null>({
-      firstName: 'Jim',
-      lastName: 'Cooper',
-      email: 'fake@fake.com',
-    });
+    this.user = new BehaviorSubject<IUser | null>(null);
   }
 
   private storeAndReturnUser = (user: IUser): IUser => {
