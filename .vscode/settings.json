@@ -5,7 +5,7 @@
   "editor.fontSize": 21,
   "editor.fontFamily": "Source Code Pro",
   "editor.wrappingIndent": "indent",
-  "editor.wordWrap": true,
+  "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "workbench.editor.enablePreview": false,
   "compilerOptions": {
