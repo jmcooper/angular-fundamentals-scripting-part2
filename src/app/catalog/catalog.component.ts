@@ -29,7 +29,7 @@ export class CatalogComponent implements OnInit {
       next: (cart) => (this.cart = cart),
     });
 
-    this.route.params.subscribe((params) => {
+    this.route.queryParams.subscribe((params) => {
       this.filter = params['filter'] ?? '';
     });
   }
