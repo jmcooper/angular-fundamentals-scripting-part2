@@ -24,7 +24,6 @@ export class TemplateFormControlsComponent implements OnInit {
   getType(value: any) {
     if (value === null || value === undefined) return '';
 
-    console.log('ns', this.numericSelect);
     return typeof value;
   }
 }
