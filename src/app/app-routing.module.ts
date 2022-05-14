@@ -8,6 +8,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { CartRouteActivatorGuard } from './cart/cart-route-activator.guard';
 import { CartRouteDeactivatorGuard } from './cart/cart-route-deactivator.guard';
 import { ProductsResolver } from './catalog/products.resolver';
+import { TemplateFormControlsComponent } from './user/template-form-controls/template-form-controls.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const routes: Routes = [
   },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'controls-example', component: TemplateFormControlsComponent },
 ];
 
 @NgModule({

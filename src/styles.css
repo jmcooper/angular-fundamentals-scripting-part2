@@ -109,7 +109,8 @@ button.cta:hover {
   color: #fff;
 }
 
-input {
+input,
+select {
   padding: 15px;
   font-size: 20px;
 }

@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { AppRoutingModule } from './app-routing.module';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { RegisterComponent } from './user/register/register.component';
+import { TemplateFormControlsComponent } from './user/template-form-controls/template-form-controls.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RegisterComponent } from './user/register/register.component';
     ProductDetailsComponent,
     SignInComponent,
     RegisterComponent,
+    TemplateFormControlsComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [],
