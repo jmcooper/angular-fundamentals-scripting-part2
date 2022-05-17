@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="form">
+  <form [formGroup]="registerForm" (ngSubmit)="register()" class="form">
     <img class="logo" src="/assets/images/logo.png" />
     <div class="register">Register</div>
     <div class="sub-text">to acquire awesome bots</div>
@@ -7,21 +7,43 @@
     <input
       placeholder="First Name"
       type="text"
+      formControlName="firstName"
     />
+    <em class="error" *ngIf="firstName?.invalid && firstName?.touched">
+      First Name is required
+    </em>
+
     <input
       placeholder="Last Name"
       type="text"
+      formControlName="lastName"
     />
+    <em class="error" *ngIf="lastName?.invalid && lastName?.touched">
+      Last Name is required
+    </em>
+
     <input
       placeholder="Email Address"
       type="text"
+      formControlName="email"
     />
+    <em class="error" *ngIf="email?.errors?.['required'] && email?.touched">
+      Email is required
+    </em>
+    <em class="error" *ngIf="email?.errors?.['email'] && email?.touched">
+      Must be a valid email format
+    </em>
     <input
       placeholder="Password"
       type="password"
+      formControlName="password"
     />
+    <em class="error" *ngIf="password?.invalid && password?.touched">
+      Password is required
+    </em>
+ 
     <div class="buttons">
-      <button type="submit" class="button cta">
+      <button type="submit" [disabled]="registerForm.invalid" class="button cta">
         Register
       </button>
     </div>
