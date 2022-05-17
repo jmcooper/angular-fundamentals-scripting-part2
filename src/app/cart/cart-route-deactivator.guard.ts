@@ -1,4 +1,3 @@
-import { convertFromMaybeForwardRefExpression } from '@angular/compiler/src/render3/util';
 import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
