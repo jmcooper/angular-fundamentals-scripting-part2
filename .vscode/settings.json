@@ -2,21 +2,15 @@
 {
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "editor.fontSize": 21,
+  "editor.fontSize": 26,
   "editor.fontFamily": "Source Code Pro",
   "editor.wrappingIndent": "indent",
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "workbench.editor.enablePreview": false,
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "system",
-    "experimentalDecorators": true
-  },
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
-  "window.menuBarVisibility": "toggle",
   "files.autoSave": "onFocusChange",
   "editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
 
