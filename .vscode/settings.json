@@ -2,7 +2,7 @@
 {
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "editor.fontSize": 26,
+  "editor.fontSize": 18,
   "editor.fontFamily": "Source Code Pro",
   "editor.wrappingIndent": "indent",
   "editor.wordWrap": "on",
@@ -13,4 +13,5 @@
   "workbench.activityBar.visible": false,
   "files.autoSave": "onFocusChange",
   "editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
+  "window.zoomLevel": 1.9
 }
